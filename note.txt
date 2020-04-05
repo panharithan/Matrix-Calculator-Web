@@ -1,0 +1,9 @@
+.\venv\Scripts\activate
+
+Structure project by this command
+$ django-admin startproject --template=https://github.com/Mischback/django-project-skeleton/archive/master.zip [ProjectName]
+
+$ python manage.py migrate
+$ python manage.py createsuperuser
+
+
