@@ -7,6 +7,8 @@ The `urlpatterns` list routes URLs to views. For more information please see:
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from . import views
+
 
 urlpatterns = [
     # Examples:
@@ -16,7 +18,6 @@ urlpatterns = [
     url(r'^login/$', auth_views.LoginView.as_view(template_name='core/login.html'),
         name='core_login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='core_logout'),
+    url(r'^$', views.home),     # this is home route, Django use regular expression with route.
 
-    # enable the admin interface
-    url(r'^admin/', admin.site.urls),
 ]
